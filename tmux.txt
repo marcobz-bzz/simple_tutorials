@@ -1,0 +1,90 @@
+TMUX FOR BEGGINERS
+==================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+"THE BEER-WARE LICENSE" (Revision 42):
+<marcobz@gmail.com> wrote this file. As long as you retain this notice you can 
+do whatever you want with this stuff. If we meet some day, and you think this 
+stuff is worth it, you can buy me a beer in return Marco Bezerra.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Concepts:
+
+SESSIONS ->> WINDOWS ->> PANELS
+
++-(session 0)---+-(window 0)----+-(panel 0)
++-(session 1)	+-(window 1)	+-(panel 1)
+|     ...       |    ...        |    ...
+|               |               +-(panel p)
+|               +-(window w)
++-(session s)
+
+You always work on a panel!!! 
+This is inside a window, that belongs to a session.
+
+1. CREATE FIRST SESSION
+-----------------------
+
+You always have to create a SESSION with the command:
+
+$ tmux
+
+After this, you have a session, its first window and first panel.
+
+And more, you will be into the panel -- there will be a GREEN BAR on the bottom.
+
+On the left side you can see:
+
++---------------/
+| [0] 0:bash* 	/
++---------------/
+
+[0] -- current SESSION.
+0: -- WINDOW number.
+bash -- WINDOW name.
+* -- signalize you are in this WINDOW.
+
+2. THE MAGIC KEY
+----------------
+
+Ctrl+b is the magic key to command tmux.
+You can change this, but don't mean you should.
+This key is useful INSIDE tmux, and it will be needed to command.
+
+3. INSIDE TMUX 
+--------------
+
+Ctrl+b+	"           - create new panel, VERTICAL split
+        %           - create new panel, HORIZONTAL split
+        c           - create new window
+        Arrow Keys  - navigate among panels
+        0,1,...     - navigate among windows
+        n or p      - navigate to next or previous window
+        w           - navigate through sessions, windows and panels
+        z           - panel zoom (full screen)
+        t           - show time on a panel
+        d           - detach from tmux
+        Z           - halt and detach
+
+$ exit	% close the current panel
+If it is the last panel from the last window, it will close the session.
+
+4. OUTSIDE TMUX
+---------------
+
+$ tmux ls           % list sessions
+$ tmux attach -t 0  % attach session 0 (or others targets: 1, 2, ....)
+$ tmux kill-session -t 0   % kill session target 0 (or others)
+
+5. FINAL THOUGHTS
+-----------------
+
+Technically tmux has a server that you access through a client.
+
+Different users can share the same session from a server to collaborative
+work -- both attach the same session. 
+ 
+For [numerous] other commands read the manual :).
+
+==/end/==
+ 

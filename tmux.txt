@@ -82,7 +82,7 @@ $ tmux kill-session -t 0   % kill session target 0 (or others)
 Technically tmux has a server that you access through a client.
 
 Different users can share the same session from a server to collaborative
-work -- both attach the same session. 
+work -- both users should attach the same session. 
  
 For [numerous] other commands read the manual :).
 

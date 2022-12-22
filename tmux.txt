@@ -86,5 +86,9 @@ work -- both users should attach the same session.
  
 For [numerous] other commands read the manual :).
 
+Type:
+
+$ curl cht.sh/tmux
+
 ==/end/==
  

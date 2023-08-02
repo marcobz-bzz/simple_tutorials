@@ -1,3 +1,19 @@
+git: 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
+config:
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+[remote "origin"]
+#    url = https://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@github.com/marcobz-bzz/simple_tutorials
+    url = https://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@github.com/marcobz-bzz/simple_tutorials
+#   url = https://github.com/marcobz-bzz/simple_tutorials.git
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+
 https://github.com/digitalpetri
 
 
